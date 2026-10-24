@@ -1,0 +1,144 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    user-select: none;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    overflow: hidden;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* Custom sleek dark scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Apple Music Equalizer Jumping Bars */
+@keyframes musicBar1 {
+  0%, 100% { height: 4px; }
+  50% { height: 16px; }
+}
+@keyframes musicBar2 {
+  0%, 100% { height: 14px; }
+  50% { height: 5px; }
+}
+@keyframes musicBar3 {
+  0%, 100% { height: 7px; }
+  50% { height: 18px; }
+}
+@keyframes musicBar4 {
+  0%, 100% { height: 16px; }
+  50% { height: 6px; }
+}
+@keyframes musicBar5 {
+  0%, 100% { height: 5px; }
+  50% { height: 13px; }
+}
+
+.animate-music-bar-1 {
+  animation: musicBar1 0.65s ease-in-out infinite alternate;
+}
+.animate-music-bar-2 {
+  animation: musicBar2 0.55s ease-in-out infinite alternate 0.1s;
+}
+.animate-music-bar-3 {
+  animation: musicBar3 0.75s ease-in-out infinite alternate 0.2s;
+}
+.animate-music-bar-4 {
+  animation: musicBar4 0.6s ease-in-out infinite alternate 0.15s;
+}
+.animate-music-bar-5 {
+  animation: musicBar5 0.7s ease-in-out infinite alternate 0.05s;
+}
+
+/* Apple Liquid Glass styling - Luminous and bright */
+.apple-glass-material {
+  background: rgba(32, 32, 40, 0.82);
+  backdrop-filter: blur(40px) saturate(210%);
+  -webkit-backdrop-filter: blur(40px) saturate(210%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 12px 35px -5px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.28);
+}
+
+.apple-sheet-header {
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+/* Ambient Lighting Extension Animations */
+@keyframes ambientGlowPulse {
+  0% {
+    transform: scale(1.08) translate(0px, 0px);
+    opacity: 0.65;
+    filter: blur(50px) saturate(210%);
+  }
+  33% {
+    transform: scale(1.22) translate(10px, -8px);
+    opacity: 0.9;
+    filter: blur(75px) saturate(240%);
+  }
+  66% {
+    transform: scale(1.14) translate(-10px, 8px);
+    opacity: 0.75;
+    filter: blur(65px) saturate(220%);
+  }
+  100% {
+    transform: scale(1.08) translate(0px, 0px);
+    opacity: 0.65;
+    filter: blur(50px) saturate(210%);
+  }
+}
+
+@keyframes ambientAurora {
+  0% {
+    filter: blur(70px) hue-rotate(0deg);
+    opacity: 0.65;
+    transform: scale(1.2) rotate(0deg);
+  }
+  50% {
+    filter: blur(95px) hue-rotate(20deg);
+    opacity: 0.85;
+    transform: scale(1.35) rotate(4deg);
+  }
+  100% {
+    filter: blur(70px) hue-rotate(0deg);
+    opacity: 0.65;
+    transform: scale(1.2) rotate(0deg);
+  }
+}
+
+.animate-ambient-glow {
+  animation: ambientGlowPulse 6s ease-in-out infinite;
+}
+
+.animate-ambient-aurora {
+  animation: ambientAurora 9s ease-in-out infinite;
+}
