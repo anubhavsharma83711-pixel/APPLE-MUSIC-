@@ -1,0 +1,35 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/api/youtube/search"
+  to = "/.netlify/functions/youtube-search"
+  status = 200
+
+[[redirects]]
+  from = "/api/youtube/suggestions"
+  to = "/.netlify/functions/youtube-suggestions"
+  status = 200
+
+[[redirects]]
+  from = "/api/youtube/trending"
+  to = "/.netlify/functions/youtube-trending"
+  status = 200
+
+[[redirects]]
+  from = "/api/health"
+  to = "/.netlify/functions/health"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "ALLOWALL"
+    Access-Control-Allow-Origin = "*"

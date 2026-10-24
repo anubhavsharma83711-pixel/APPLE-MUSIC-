@@ -1,0 +1,8 @@
+{
+  "name": "Remix Remix Remix Remix macOS Sonoma Glass - Project OS",
+  "description": "High-fidelity Apple Music web player featuring full-screen live ambient video, liquid glass aesthetics, synced lyrics, and Billboard charts.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
