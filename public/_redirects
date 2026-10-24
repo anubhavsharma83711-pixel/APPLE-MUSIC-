@@ -1,0 +1,5 @@
+/api/youtube/search      /.netlify/functions/youtube-search      200
+/api/youtube/suggestions /.netlify/functions/youtube-suggestions 200
+/api/youtube/trending   /.netlify/functions/youtube-trending   200
+/api/health             /.netlify/functions/health             200
+/*                      /index.html                            200
